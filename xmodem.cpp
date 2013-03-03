@@ -1196,7 +1196,7 @@ long etotal, filesize, filepos, block;
       break;  // that's it, I'm done with this
     }
 
-  } while(ecount < TOTAL_ERROR_COUNT * 2); // twice error count allowed for sending
+  } while(ecount < TOTAL_ERROR_COUNT); // twice error count allowed for sending
 
 // TODO: progress indicator
 //   If filesize& <> 0 And filepos& <= filesize& Then
@@ -1213,6 +1213,7 @@ long etotal, filesize, filepos, block;
 #ifdef STAND_ALONE
   fputs("SendXmodem fail (total error count)\n", stderr);
 #endif // STAND_ALONE
+
   return -2; // exit on error
 }
 
