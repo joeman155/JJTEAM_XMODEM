@@ -188,7 +188,7 @@
 // common definitions
 
 #define SILENCE_TIMEOUT 5000 /* 5 seconds */
-#define TOTAL_ERROR_COUNT 32
+#define TOTAL_ERROR_COUNT 512  /* Is normally 32 ...might make more resilent */
 #define ACK_ERROR_COUNT 8
 
 
