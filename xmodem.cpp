@@ -1187,6 +1187,7 @@ long etotal, filesize, filepos, block;
       else
       {
         ecount++; // increase total error count, then loop back and re-send packet
+        pX->buf.xbuf.cSOH = _NAK_; //hack, else it doesn't try resending. This assume Checksum
         break;
       }
     }
